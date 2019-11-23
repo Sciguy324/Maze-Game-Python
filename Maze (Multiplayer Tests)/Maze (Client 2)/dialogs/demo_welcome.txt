@@ -1,0 +1,2 @@
+Hello, and welcome to the demo!
+Here, you will find a demonstration of the currently      completed features found in the game.

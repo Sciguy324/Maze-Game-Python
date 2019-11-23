@@ -1,0 +1,30 @@
+tile_dict = {7: 'tiles/void.png', 8: 'tiles/wood.png', 10: 'tiles/corner.png', 59: 'tiles/table.png', 63: 'tiles/table_bottom_left.png', 65: 'tiles/table_bottom_right.png', 76: 'tiles/white_green_wall_base_rimmed.png', 77: 'tiles/white_green_wall_painting_base.png', 79: 'tiles/white_green_wall_base_drawer.png', 80: 'tiles/drawer_legs.png', 81: 'tiles/white_green_wall_base_left.png', 82: 'tiles/white_green_wall_base.png', 83: 'tiles/white_green_wall_base_right.png', 87: 'tiles/wood_shade.png'}
+    deco_dict = {2: 'tiles/table_top_left.png', 4: 'tiles/table_top_right.png', 17: 'tiles/white_green_wall_top_rimmed.png', 18: 'tiles/white_green_wall_painting_top.png', 19: 'tiles/white_green_wall_clock.png', 21: 'tiles/white_green_wall_top_left.png', 22: 'tiles/white_green_wall_top.png', 23: 'tiles/white_green_wall_top_right.png'}
+    t_ids = build_id_list(tile_dict)
+    d_ids = build_id_list(deco_dict)
+
+    colliders = [10, 59, 63, 65, 76, 77, 79, 81, 82, 83]
+
+    tilemap = [[10, 7, 7, 7, 7, 7, 10, 7, 7, 10, 7, 7, 7, 7, 7, 7, 10],
+               [10, 81, 82, 82, 82, 83, 10, 7, 7, 10, 81, 77, 82, 82, 79, 83, 10],
+               [10, 87, 87, 87, 87, 87, 10, 7, 7, 10, 87, 87, 87, 87, 80, 87, 10],
+               [10, 8, 8, 8, 8, 8, 10, 7, 7, 10, 8, 8, 63, 65, 8, 8, 10],
+               [10, 81, 83, 8, 81, 82, 82, 82, 83, 10, 8, 8, 8, 8, 8, 8, 10],
+               [10, 87, 87, 8, 87, 87, 87, 87, 87, 10, 7, 8, 7, 7, 8, 7, 10],
+               [10, 8, 59, 8, 8, 8, 8, 8, 8, 81, 83, 8, 81, 83, 8, 76, 10],
+               [10, 8, 8, 8, 8, 8, 8, 8, 8, 87, 87, 8, 87, 87, 8, 87, 10],
+               [10, 10, 10, 10, 10, 10, 10, 10, 8, 10, 10, 10, 10, 10, 10, 10, 10]]
+
+    decomap = [[0, 21, 22, 22, 22, 23, 0, 0, 0, 0, 21, 18, 22, 22, 19, 23, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 0, 0, 0],
+               [0, 21, 23, 0, 21, 22, 22, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 23, 0, 21, 23, 0, 17, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+               [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+    loading_zones = {(8, 8): [demo, (27, 6)]}
+
+    return t_ids, tilemap, d_ids, decomap, colliders, loading_zones

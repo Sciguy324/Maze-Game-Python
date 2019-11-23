@@ -1,0 +1,3 @@
+The Multiplayer Tests version is the most recent version
+
+The Pygame/Checkpoint and Graphics.py versions are kept for historical reasons, but are far from the most recent version.
